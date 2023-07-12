@@ -91,11 +91,18 @@
 # message = "hello " + name + " welcome to " + course + " class."
 # print(message)
 
-name = input("Enter your name: ")
-print(name)
+# name = input("Enter your name: ")
+# print(name)
 
 
 # TODO    برنامه ای بنویسید که نام و نام خانوادگی و سن کاربر را از ورودی دریافت نماید
 # و سپس پیغامی مشابه زیر نمایش دهد
 # 
 # Hello Mary, your family is Rezaei and your age is 15.
+
+# name = input("Enter your name: ")
+# family = input("Enter your family: ")
+# age = int(input("Enter your age: "))
+
+# message = f"Hello {name}, your family is {family} and your age is {age}."
+# print(message)
