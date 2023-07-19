@@ -46,6 +46,23 @@
 
 # سپس یک اسم از ورودی دریافت نمایید و از لیست بالا حذف کنید.
 
+# students = []
+# s1 = input("enter a name: ")
+# s2 = input("enter a name: ")
+# s3 = input("enter a name: ")
+# s4 = input("enter a name: ")
+# s5 = input("enter a name: ")
+#
+# students.append(s1)
+# students.append(s2)
+# students.append(s3)
+# students.append(s4)
+# students.append(s5)
+# print(students)
+#
+# name = input("enter a name to delete from the list: ")
+# students.remove(name)
+# print(students)
 
 # numbers = [1, 2, 3, 4, 5, 6, 7]
 
@@ -53,22 +70,34 @@
 
 # TODO  برنامه ای بنویسید که مجموع اعداد لیست بالا را محاسبه و نمایش دهد.
 
+#
+# total = numbers[0] + numbers[1] + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6]
+# print("total is:", total)
+#
+# total = sum(numbers)
+# print("total is:", total)
 
-# numbers = [1, 2, 3, 4, 5, 6, 7]
+
+
+
+
+numbers = [1, 2, 3, 4, 5, 6, 7]
 
 # print(numbers[0:3])
 # print(numbers[:3])
-
-
 # print(numbers[1:4])
-
 # TODO برش های زیر را از لیست بالا نمایش دهید
 
 # [3,4,5]
+print(numbers[2:5])
 # [3,4]
+print(numbers[2:4])
 # [5,6]
+print(numbers[4:6])
 # [5,6,7]
+print(numbers[4:7])
 # [4,5,6]
+print(numbers[3:6])
 
 
 # list1 = [1,2,3,4]
@@ -105,22 +134,22 @@
 # favorite_sports = ["football", "tennis", "basketball"]
 
 
-favorite_sports = {}
-# print(type(favorite_sports))
-
-
-favorite_sports["dariush"] = "football"
-favorite_sports["hossin"] = "football"
-favorite_sports["mohammad"] = "tennis"
-
-print(favorite_sports)
-
-print(f"mohammad likes {favorite_sports['mohammad']}")
-print(f"darius likes {favorite_sports['dariush']}")
-print(f"hossin likes {favorite_sports['hossin']}")
-
-favorite_sports["armin"] = "pingpong"
-print(favorite_sports)
-
-del favorite_sports["armin"]
-print(favorite_sports)
+# favorite_sports = {}
+# # print(type(favorite_sports))
+#
+#
+# favorite_sports["dariush"] = "football"
+# favorite_sports["hossin"] = "football"
+# favorite_sports["mohammad"] = "tennis"
+#
+# print(favorite_sports)
+#
+# print(f"mohammad likes {favorite_sports['mohammad']}")
+# print(f"darius likes {favorite_sports['dariush']}")
+# print(f"hossin likes {favorite_sports['hossin']}")
+#
+# favorite_sports["armin"] = "pingpong"
+# print(favorite_sports)
+#
+# del favorite_sports["armin"]
+# print(favorite_sports)
