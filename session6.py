@@ -53,15 +53,28 @@
 
 """
 
+# total = 0
+# for i in range(5):
+#     new_number = float(input("enter a number: "))
+#     if new_number % 2 != 0:
+#         total += new_number  # total = total + new_number
+# print("total is:",total)
+
 
 """
 لا کمک  حلقه فور، برنامه ای بنویسید که نام پنج دانش آموز را از ورودی دریافت نماید
 و در لیتی ذخیره کند
-
-
-
 """
+# students = []
+# for i in range(5):
+#     new_name = input("enter a name: ")
+#     students.append(new_name)
 
+# string = ''
+# for name in students:
+#     string += name + " "
+
+# print("students are:", string)
 
 """
 
@@ -70,21 +83,38 @@
 
 """
 
-import turtle
-screen = turtle.Screen()
+# all_students = []
 
-my_turtle = turtle.Turtle()
-my_turtle.color("red")
-my_turtle.pensize(4)
+# for i in range(5):
+#     name = input("enter a name: ")
+#     age = int(input("enter an age: "))
+#     student = {}
+#     student['name'] = name
+#     student['age'] = age
+#     all_students.append(student)
 
-sides = int(screen.textinput("userinput", "How many sides? "))
+# print(all_students)
+# print(all_students[0])
+# print(all_students[0]['name'])
+# print(all_students[0]['age'])
 
-for i in range(sides):
-    my_turtle.forward(100)
-    my_turtle.left(360/sides)
 
 
-turtle.done()
+# import turtle
+# screen = turtle.Screen()
+
+# my_turtle = turtle.Turtle()
+# my_turtle.color("red")
+# my_turtle.pensize(4)
+
+# sides = int(screen.textinput("userinput", "How many sides? "))
+
+# for i in range(sides):
+#     my_turtle.forward(100)
+#     my_turtle.left(360/sides)
+
+
+# turtle.done()
 
 
 # TODO
@@ -93,9 +123,18 @@ turtle.done()
 """
 
 
+
+
 # # TODO
 numbers = [1, 2, 4, 6, 88, 99, 90]
 """"
 با کمک حلقه فور ، مجموع اعداد لیست بالا را محاسبه نمایید
 و حاصل جمع را نمایش دهید
 """
+total = 0
+
+for n in numbers:
+    total += n
+
+
+print("sum of all numbers:", total)
