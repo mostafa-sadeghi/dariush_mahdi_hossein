@@ -52,19 +52,34 @@ def move_snake():
 
 
 def go_up():
-    snake_head.direction = "up"
+    if snake_head.direction != "down":
+        snake_head.direction = "up"
 
 
 def go_down():
-    snake_head.direction = "down"
+    if snake_head.direction != "up":
+        snake_head.direction = "down"
 
 
 def go_right():
-    snake_head.direction = "right"
+    if snake_head.direction != "left":
+        snake_head.direction = "right"
 
 
 def go_left():
-    snake_head.direction = "left"
+    if snake_head.direction != "right":
+        snake_head.direction = "left"
+
+
+def reset(snake_tails):
+    snake_head.home()
+    global score
+    score = 0
+    snake_head.direction = ""
+    for tail in snake_tails:
+        tail.ht()
+
+    snake_tails = []
 
 
 main_surface.listen()
@@ -73,13 +88,12 @@ main_surface.onkeypress(go_down, "Down")
 main_surface.onkeypress(go_right, "Right")
 main_surface.onkeypress(go_left, "Left")
 main_surface.tracer(False)
-
+snake_tails = []
 score = 0
 my_turtle = create_turtle("square", "white")
 my_turtle.goto(0, 260)
 my_turtle.ht()
 
-snake_tails = []
 running = True
 while running:
     my_turtle.clear()
@@ -100,5 +114,12 @@ while running:
     if len(snake_tails) > 0:
         snake_tails[0].goto(snake_head.xcor(), snake_head.ycor())
 
+    if snake_head.xcor() > 290 or snake_head.xcor() < -290 or snake_head.ycor() > 230 or snake_head.ycor() < -290:
+        reset(snake_tails)
+
     move_snake()
+    for t in snake_tails:
+        if snake_head.distance(t) < 20:
+            reset(snake_tails)
+
     sleep(0.2)
