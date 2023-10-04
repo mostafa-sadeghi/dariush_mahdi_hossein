@@ -1,6 +1,7 @@
 from random import randint
 from turtle import Screen, Turtle
 from time import sleep
+import os
 
 main_surface = Screen()
 main_surface.bgcolor("black")
@@ -74,12 +75,16 @@ def go_left():
 def reset(snake_tails):
     snake_head.home()
     global score
+    global high_score
+    if score > high_score:
+        high_score = score
+
     score = 0
     snake_head.direction = ""
     for tail in snake_tails:
         tail.ht()
 
-    snake_tails = []
+    snake_tails.clear()
 
 
 main_surface.listen()
@@ -90,14 +95,35 @@ main_surface.onkeypress(go_left, "Left")
 main_surface.tracer(False)
 snake_tails = []
 score = 0
+
+if os.path.exists("score.txt"):
+
+    with open("score.txt", "r") as file:
+        high_score = int(file.read())
+else:
+    high_score = 0
+
 my_turtle = create_turtle("square", "white")
 my_turtle.goto(0, 260)
 my_turtle.ht()
 
+
+def onclose():
+    global running
+    running = False
+    with open("score.txt", "w") as f:
+        f.write(str(high_score))
+
+
+root = main_surface._root
+root.protocol("WM_DELETE_WINDOW", onclose)
+
+
 running = True
 while running:
     my_turtle.clear()
-    my_turtle.write(f"Score: {score}", font=("arial", 22), align="center")
+    my_turtle.write(f"Score: {score}, HighScore: {high_score}", font=(
+        "arial", 22), align="center")
 
     main_surface.update()
     if snake_head.distance(snake_food) < 20:
