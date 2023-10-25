@@ -45,5 +45,21 @@ numbers = [28,25,42,2,28]
 برنامه را به صورت تابع بنویسید
 
 """
-def find_min_max(n):
-    pass
+
+
+# def find_min_max(n):
+#     minimum = n[0]
+#     maximum = n[0]
+#     for x in n:
+#         if x < minimum:
+#             minimum = x
+#         if x > maximum:
+#             maximum = x
+
+#     return minimum, maximum
+
+
+# numbers = [28, 25, 42, 2, 28]
+# print(find_min_max(numbers))
+
+
