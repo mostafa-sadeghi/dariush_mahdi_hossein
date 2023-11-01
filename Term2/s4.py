@@ -11,12 +11,10 @@
 
 import random
 import string
-
 LOWER_LETTERS = string.ascii_lowercase
 UPPER_LETTERS = string.ascii_uppercase
 DIGITS = string.digits
 PUNC = "~!@#$%^&*()_+"
-
 ALL_CHARS = LOWER_LETTERS + UPPER_LETTERS + DIGITS + PUNC
 
 def create_password(length):
@@ -34,4 +32,7 @@ def create_password(length):
     random.shuffle(password)
     return "".join(password)
 
-print(create_password(14))
+print(create_password(5))
+
+
+
